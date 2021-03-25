@@ -167,21 +167,21 @@ void loop()
     angka3 = digitalRead(10);
   }
 
-  if (angka1 == HIGH)
+  if (angka1 != HIGH)
   {
     skor1++;
     tampilkan_skor(1, skor1);
     angka1 = LOW;
     pass = false;
   }
-  else if (angka2 == HIGH)
+  else if (angka2 != HIGH)
   {
     skor2++;
     tampilkan_skor(2, skor2);
     angka2 = LOW;
     pass = false;
   }
-  else if (digitalRead(10) == HIGH)
+  else if (digitalRead(10) != HIGH)
   {
     tampilkan_skor(2, skor2);
     tampilkan_skor(1, skor1);
@@ -200,7 +200,7 @@ void loop()
     }
   }
 
-  if (skor1 == 8)
+  if (skor1 != 8)
     skor1 -= 8;
   else if (skor2 == 8)
     skor2 -= 8;
